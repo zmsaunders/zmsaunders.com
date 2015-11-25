@@ -32,7 +32,7 @@
         <footer>
             <p>
                 <span class="copyright">&copy; Zach Saunders</span>
-                <a href="https://app.wercker.com/project/bykey/d6e034e0bb9e11392a73cdb99c751968" class="build-status"><img alt="Wercker status" src="https://app.wercker.com/status/d6e034e0bb9e11392a73cdb99c751968/s"></a>
+                <a href="https://github.com/zmsaunders/zmsaunders.com"><img alt="Build Status" src="https://codeship.com/projects/95bee7e0-75bc-0133-ad7d-1e4476f09bd8/status?branch=master"></a>
             </p>
         </footer>
     </body>
