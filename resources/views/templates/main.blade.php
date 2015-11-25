@@ -20,7 +20,7 @@
                         <a href="/">About</a>
                     </li>
                     <li>
-                        <a href="http://blog.zmsaunders.com">Blog</a>
+                        <a href="/blog">Blog</a>
                     </li>
                     <!-- <li>
                         <a href="labs">Labs</a>
