@@ -1,0 +1,14 @@
+body {
+    background: $c1;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, Sans-Serif;
+}
+
+.container {
+    @include outer-container;
+    padding: 2em inherit;
+    @include media($max-width) {
+        padding: 0 inherit;
+    }
+}

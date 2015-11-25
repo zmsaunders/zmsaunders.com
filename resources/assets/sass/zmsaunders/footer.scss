@@ -1,0 +1,17 @@
+footer {
+    background: $c2;
+    color: $c3;
+    padding: 3em;
+
+    p {
+        @include outer-container;
+    }
+
+    .copyright {
+        @include span-columns(10);
+    }
+
+    .build-status {
+        @include span-columns(2);
+    }
+}
