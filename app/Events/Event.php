@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace ZMS\Events;
 
 abstract class Event
 {
