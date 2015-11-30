@@ -12,6 +12,7 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('main.scss').version('css/main.css');
-    mix.sass('admin.scss').version('css/admin.css');
+    mix.sass('main.scss');
+    mix.sass('admin.scss');
+    mix.version(['css/admin.css', 'css/main.css']);
 });
