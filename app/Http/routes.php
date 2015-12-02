@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/', function(){
+Route::get('/', function () {
     return view('about');
 });
 
@@ -13,7 +13,7 @@ Route::group(array(
         'namespace' => 'Admin',
         'prefix' => 'admin',
         'middleware' => 'auth'
-    ), function(){
+    ), function () {
 
         Route::get('/', 'DashboardController@index');
 });

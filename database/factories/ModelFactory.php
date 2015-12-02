@@ -19,3 +19,11 @@ $factory->define(ZMS\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(ZMS\Post::class, function (Faker\Generator $faker) use ($factory) {
+	return [
+		'title' => $faker->sentence(rand(1,10)),
+		'text' => implode("\n\n", $faker->paragraphs(rand(1,10))),
+		'user_id' => $factory->create('ZMS\User')->id,
+	];
+});
