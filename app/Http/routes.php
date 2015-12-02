@@ -16,4 +16,5 @@ Route::group(array(
     ), function () {
 
         Route::get('/', 'DashboardController@index');
+        Route::get('post/{postID}', 'PostController@editForm');
 });
