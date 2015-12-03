@@ -1,6 +1,7 @@
 @extends('templates.admin')
 
 @section('content')
+	<div class="container">
 	@if(isset($post))
 		{!! Form::model($post) !!}
 		<h2>Modify Post</h2>
@@ -18,4 +19,5 @@
 		{!! Form::button('Save', ['type' => 'text']) !!}
 
 		{!! Form::close() !!}
+	</div>
 @stop

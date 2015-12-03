@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<div id="posts">
+	<div id="posts" class="container">
 		<h2>Posts</h2>
 		@foreach($posts as $post)
 			<div class="post">
@@ -13,5 +13,9 @@
 				{!! $parser->transform($post->text) !!}
 			</div>
 		@endforeach
+
+		<a href="{{URL::action('Admin\PostController@newForm')}}" class="button">
+			<button>New Post</button>
+		</a>
 	</div>
 @stop

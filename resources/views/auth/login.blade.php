@@ -1,7 +1,7 @@
 @extends('templates.admin')
 
 @section('content')
-
+    <div class="container">
     @if (count($errors) > 0)
         <div class="errors">
             <strong>There were some problems with your input.</strong>
@@ -24,5 +24,5 @@
     {!! Form::checkbox('remember') !!} Remember me
 
     {!! Form::submit('Login') !!}
-
+    </div>
 @endsection

@@ -19,6 +19,11 @@ class PostController extends Controller
         $this->post = $post;
     }
 
+    public function newForm()
+    {
+        return view('admin.posts.form');
+    }
+
     public function editForm($postID)
     {
         $post = $this->post->find($postID);
