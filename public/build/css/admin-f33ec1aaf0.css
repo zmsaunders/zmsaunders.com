@@ -323,6 +323,14 @@ body {
   }
 }
 
+h1 {
+  font-size: 3.6em;
+  font-family: 'Roboto', Arial, Sans-Serif;
+  color: #2B3A42;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  margin: 20px 0;
+}
+
 header {
   background: #2B3A42;
   padding: 2em inherit;
@@ -531,4 +539,27 @@ footer .build-status:last-child {
   .about .full {
     padding: 2em 0;
   }
+}
+
+.postList .post {
+  border-bottom: 1px solid #d6d6d6;
+  padding: 40px 0;
+  display: block;
+}
+
+.postList .post h2 {
+  font-size: 1.75em;
+  font-weight: 800;
+  text-shadow: 0px 1px 0px #2B3A42;
+  margin-bottom: 0;
+}
+
+.postList .post .info {
+  font-size: 0.9em;
+  color: #898989;
+  text-shadow: 0px 1px 0px #fff;
+}
+
+.postList .post:last-child {
+  border-bottom: none;
 }
