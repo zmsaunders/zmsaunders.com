@@ -333,7 +333,7 @@ h1 {
 
 header {
   background: #2B3A42;
-  padding: 2em inherit;
+  padding: 1.5em 0;
 }
 
 header .me {

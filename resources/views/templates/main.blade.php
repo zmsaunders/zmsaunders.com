@@ -3,7 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Zach Saunders</title>
-        <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,900" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto:400,100,300,400italic,900" rel="stylesheet">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{elixir('css/main.css')}}" />
     </head>
