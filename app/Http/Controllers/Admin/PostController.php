@@ -7,7 +7,7 @@ use Michelf\MarkdownExtra;
 use Auth;
 use ZMS\Http\Controllers\Controller;
 use ZMS\Http\Requests;
-use ZMS\HTTP\Requests\BlogPostRequest;
+use ZMS\Http\Requests\BlogPostRequest;
 use ZMS\Post;
 
 class PostController extends Controller
