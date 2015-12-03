@@ -14,9 +14,8 @@ class BlogPostRequest extends Request
      */
     public function authorize()
     {
-        if ( ! Auth::check()) {
-            return false;
-        }
+        // Just need to be logged in
+        return Auth::check();
     }
 
     /**

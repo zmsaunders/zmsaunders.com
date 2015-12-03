@@ -4,6 +4,9 @@ Route::get('/', function () {
     return view('about');
 });
 
+Route::get('blog', 'BlogController@index');
+Route::get('blog/{slug}', 'BlogController@entry');
+
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
@@ -17,4 +20,5 @@ Route::group(array(
 
         Route::get('/', 'DashboardController@index');
         Route::get('post/{postID}', 'PostController@editForm');
+        Route::post('post/{postID?}', 'PostController@save');
 });

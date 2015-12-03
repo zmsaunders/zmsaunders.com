@@ -3,10 +3,12 @@
 namespace ZMS\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use ZMS\Http\Requests;
+use Michelf\MarkdownExtra;
+use Auth;
 use ZMS\Http\Controllers\Controller;
+use ZMS\Http\Requests;
+use ZMS\HTTP\Requests\BlogPostRequest;
 use ZMS\Post;
-use \Michelf\MarkdownExtra;
 
 class PostController extends Controller
 {
@@ -40,5 +42,14 @@ class PostController extends Controller
         if ( ! $post) {
             abort(404);
         }
+
+        $post->title = $request->input('title');
+        $post->text = $request->input('text');
+        $post->slug = str_slug($request->input('title'));
+
+        Auth::user()->posts()->save($post);
+
+        return redirect()
+            ->action('Admin\DashboardController@index');
     }
 }
