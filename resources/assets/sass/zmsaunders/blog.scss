@@ -10,15 +10,45 @@
 			text-shadow: 0px 1px 0px $c4;
 			margin-bottom: 0;
 		}
-
-		.info {
-			font-size: 0.9em;
-			color: darken($c1, 40%);
-			text-shadow: 0px 1px 0px #fff;
-		}
 	}
 
 	.post:last-child {
 		border-bottom: none;
+	}
+}
+
+.info {
+	font-size: 0.9em;
+	color: darken($c1, 40%);
+	text-shadow: 0px 1px 0px #fff;
+}
+
+.copy {
+	h2 {
+		font-size: 1.8em;
+		text-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+		color: #333;
+		padding: .5em 0;
+		border-bottom: 1px solid #ccc;
+	}
+
+	h3 {
+		font-size: 1.4em;
+		color: #666;
+	}
+
+	h4 {
+		font-size: 1.2em;
+		color: #666;
+	}
+
+	ul {
+		list-style-type: disc;
+		list-style-position: outside;
+		margin: 10px 0;
+
+		li {
+			margin-left: 1.5em;
+		}
 	}
 }
