@@ -1,0 +1,23 @@
+.loginForm {
+	@include span-columns(8);
+	@include shift(2);
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#posts {
+	@include span-columns(8);
+	@include shift(2);
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	.post {
+		padding: 10px 0;
+		border-bottom: 1px solid #ccc;
+		h3 { margin: 0 };
+	}
+
+	.post:last-child {
+		border-bottom: none;
+	}
+}

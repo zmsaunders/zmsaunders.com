@@ -20,7 +20,22 @@
     <body>
         <header>
             <div class="container">
-                <h1>Admin</h1>
+            <a href="/" class="me">
+                <span class="img"></span>
+                <h1>Zach Saunders</h1>
+                <h2>Web Developer &amp; Code Spelunker</h2>
+            </a>
+                <ul>
+                    <li>
+                        <a href="/">About</a>
+                    </li>
+                    <li>
+                        <a href="/blog">Blog</a>
+                    </li>
+                    <!-- <li>
+                        <a href="labs">Labs</a>
+                    </li> -->
+                </ul>
             </div>
         </header>
             @yield('content')
