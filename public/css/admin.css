@@ -592,6 +592,6 @@ footer .build-status:last-child {
   margin-left: 1.5em;
 }
 
-.copy pre {
+.copy code {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
