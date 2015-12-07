@@ -19,7 +19,7 @@ header {
             @include span-columns(7);
         }
 
-        .img {
+        .img, .imgBak {
             float: left;
             background: url('/images/face.png') top left no-repeat;
             background-size: cover;
@@ -33,6 +33,11 @@ header {
                 width: 6em;
                 height: 6em;
             }
+        }
+
+        .imgBak {
+            background: url('/images/photo.jpg') top left no-repeat;
+            background-size: cover;
         }
 
         h1, h2 {
@@ -63,13 +68,6 @@ header {
                 margin-left: 120px;
                 font-size: 1.2em;
                 width: 400px;
-            }
-        }
-
-        &:hover {
-
-            .img {
-                border-radius: 20px;
             }
         }
     }
@@ -107,5 +105,45 @@ header {
                 background: $c2;
             }
         }
+    }
+}
+
+.flipCont {
+    perspective: 1000;
+    float: left;
+    &:hover .flipInner {
+        transform: rotateY(180deg);
+    }
+
+    &, .img, .imgBak {
+        width: 4em;
+        height: 4em;
+
+        @include media(450px) {
+            width: 6em;
+            height: 6em;
+        }
+    }
+
+    .flipInner {
+        transition: 0.3s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .img, .imgBak {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    }
+
+    .img {
+        transform: rotateY(0deg);
+    }
+
+    .imgBak {
+        transform: rotateY(180deg);
     }
 }

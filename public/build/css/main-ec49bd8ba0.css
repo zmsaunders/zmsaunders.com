@@ -436,7 +436,8 @@ header .me:last-child {
   }
 }
 
-header .me .img {
+header .me .img,
+header .me .imgBak {
   float: left;
   background: url("/images/face.png") top left no-repeat;
   background-size: cover;
@@ -448,10 +449,16 @@ header .me .img {
 }
 
 @media screen and (min-width: 450px) {
-  header .me .img {
+  header .me .img,
+  header .me .imgBak {
     width: 6em;
     height: 6em;
   }
+}
+
+header .me .imgBak {
+  background: url("/images/photo.jpg") top left no-repeat;
+  background-size: cover;
 }
 
 header .me h1,
@@ -490,10 +497,6 @@ header .me h2 {
     font-size: 1.2em;
     width: 400px;
   }
-}
-
-header .me:hover .img {
-  border-radius: 20px;
 }
 
 header ul {
@@ -539,6 +542,60 @@ header ul a {
 
 header ul a:hover {
   background: #BDD4DE;
+}
+
+.flipCont {
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  float: left;
+}
+
+.flipCont:hover .flipInner {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flipCont,
+.flipCont .img,
+.flipCont .imgBak {
+  width: 4em;
+  height: 4em;
+}
+
+@media screen and (min-width: 450px) {
+  .flipCont,
+  .flipCont .img,
+  .flipCont .imgBak {
+    width: 6em;
+    height: 6em;
+  }
+}
+
+.flipCont .flipInner {
+  transition: 0.3s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flipCont .img,
+.flipCont .imgBak {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.flipCont .img {
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.flipCont .imgBak {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 footer {

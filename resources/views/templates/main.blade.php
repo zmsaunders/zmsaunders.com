@@ -22,7 +22,12 @@
         <header>
             <div class="container">
             <a href="/" class="me">
-                <span class="img"></span>
+                <div class="flipCont">
+                    <div class="flipInner">
+                        <span class="img"></span>
+                        <span class="imgBak"></span>
+                    </div>
+                </div>
                 <h1>Zach Saunders</h1>
                 <h2>Web Developer &amp; Code Spelunker</h2>
             </a>
