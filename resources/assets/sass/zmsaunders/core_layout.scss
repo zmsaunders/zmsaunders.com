@@ -63,11 +63,6 @@ h1 {
 
         @include media(768px) {
             padding: 2em;
-            margin-bottom: 0;
-
-        }
-
-        @include media(900px) {
         }
 
         span {
