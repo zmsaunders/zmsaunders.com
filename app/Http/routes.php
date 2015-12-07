@@ -23,3 +23,20 @@ Route::group(array(
         Route::get('post/{postID}', 'PostController@editForm');
         Route::post('post/{postID?}', 'PostController@save');
 });
+
+// Old redirects
+route::get('laravel-asset-management-and-auto-deployments', function() {
+	return redirect('/blog/laravel-asset-management-and-auto-deployments');
+});
+
+route::get('cookie-monster', function() {
+	return redirect('/blog/cookie-monster');
+});
+
+route::get('fun-with-tlds', function() {
+	return redirect('/blog/fun-with-tlds');
+});
+
+route::get('hello-world', function() {
+	return redirect('/blog/hello-world');
+});
