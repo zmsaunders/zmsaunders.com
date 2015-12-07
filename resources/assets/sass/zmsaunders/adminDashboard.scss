@@ -21,3 +21,10 @@
 		border-bottom: none;
 	}
 }
+
+.postForm {
+	@include span-columns(8);
+	@include shift(2);
+	padding-top: 20px;
+	padding-bottom: 20px;
+}

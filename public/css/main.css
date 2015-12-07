@@ -308,7 +308,7 @@ body {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  padding: 2em inherit;
+  padding: 0 1.5em;
 }
 
 .container::after {
@@ -319,7 +319,7 @@ body {
 
 @media screen and (min-width: 68em) {
   .container {
-    padding: 0 inherit;
+    padding: 0;
   }
 }
 
@@ -331,14 +331,109 @@ h1 {
   margin: 20px 0;
 }
 
+.hero {
+  text-align: center;
+  font-weight: 800;
+  color: #EFEFEF;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 2em;
+    font-size: 4em;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .hero {
+    font-size: 5em;
+  }
+}
+
+.hero span {
+  background: rgba(0, 0, 0, 0.6);
+  display: block;
+  padding: .5em;
+}
+
+.hero h1 {
+  font-weight: inherit;
+  color: inherit;
+  text-shadow: inherit;
+  font-size: inherit;
+  display: inline;
+}
+
+.heroSmall {
+  font-weight: 800;
+  color: #EFEFEF;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  margin-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .heroSmall {
+    padding: 2em;
+    margin-bottom: 0;
+  }
+}
+
+.heroSmall span {
+  display: block;
+  padding: .5em;
+}
+
+.heroSmall h1 {
+  font-weight: inherit;
+  color: inherit;
+  text-shadow: inherit;
+  font-size: inherit;
+  display: inline;
+  font-size: 3em;
+}
+
 header {
   background: #2B3A42;
-  padding: 1.5em 0;
+  padding: 1.5em 0 0 0;
+}
+
+header .container {
+  padding: 0;
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    padding: 1.5em;
+  }
 }
 
 header .me {
   position: relative;
   float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+}
+
+header .me:last-child {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 900px) {
+  header .me {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 57.3509785009%;
+  }
+
+  header .me:last-child {
+    margin-right: 0;
+  }
 }
 
 header .me .img {
@@ -361,7 +456,7 @@ header .me .img {
 
 header .me h1,
 header .me h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 300;
   text-indent: 0;
   color: #EFEFEF;
@@ -380,37 +475,66 @@ header .me h2 {
 
 header .me h1 {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 header .me h2 {
   font-weight: 300;
   color: #BDD4DE;
-  font-size: 1.2em;
+  font-size: 1em;
+}
+
+@media screen and (min-width: 450px) {
+  header .me h2 {
+    margin-left: 120px;
+    font-size: 1.2em;
+    width: 400px;
+  }
 }
 
 header .me:hover .img {
   border-radius: 20px;
 }
 
-@media screen and (min-width: 450px) {
+header ul {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 100%;
+  background: #3F5765;
+  margin-top: 1.5em;
+}
+
+header ul:last-child {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 900px) {
   header ul {
     float: right;
+    width: auto;
+    background: none;
   }
+}
 
-  header ul li {
-    float: left;
-  }
+header ul li {
+  float: left;
 }
 
 header ul a {
   display: inline-block;
-  padding: .75em 2em;
-  margin: 1.25em .75em;
   text-transform: uppercase;
-  border-radius: 1em;
   font-weight: 500;
   color: #EFEFEF;
+  padding: .75em 2em;
   transition: all 0.2s;
+}
+
+@media screen and (min-width: 900px) {
+  header ul a {
+    margin: 1.25em .75em;
+    border-radius: 1em;
+  }
 }
 
 header ul a:hover {
@@ -458,26 +582,8 @@ footer .build-status:last-child {
 }
 
 .about .hero {
-  text-align: center;
-  font-weight: 800;
-  color: #EFEFEF;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
-  font-size: 3em;
   background: #333 url("/images/comp.jpg") center center no-repeat;
   background-size: cover;
-}
-
-@media screen and (min-width: 600px) {
-  .about .hero {
-    padding: 2em;
-    font-size: 5em;
-  }
-}
-
-.about .hero span {
-  background: rgba(0, 0, 0, 0.6);
-  display: block;
-  padding: .5em;
 }
 
 .about .third {
@@ -485,7 +591,6 @@ footer .build-status:last-child {
   display: block;
   margin-right: 2.3576515979%;
   width: 100%;
-  padding: 2em;
 }
 
 .about .third:last-child {
@@ -524,7 +629,6 @@ footer .build-status:last-child {
 }
 
 .about .full {
-  padding: 2em;
   float: left;
   display: block;
   margin-right: 2.3576515979%;
@@ -535,10 +639,9 @@ footer .build-status:last-child {
   margin-right: 0;
 }
 
-@media screen and (min-width: 768px) {
-  .about .full {
-    padding: 2em 0;
-  }
+.postList .hero {
+  background: #333 url("/images/comp2.jpg") center center no-repeat;
+  background-size: cover;
 }
 
 .postList .post {
@@ -558,10 +661,9 @@ footer .build-status:last-child {
   border-bottom: none;
 }
 
-.info {
-  font-size: 0.9em;
-  color: #898989;
-  text-shadow: 0px 1px 0px #fff;
+.pages {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .copy h2 {
@@ -594,4 +696,9 @@ footer .build-status:last-child {
 
 .copy code {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.postContent .heroSmall {
+  background: #333 url("/images/post.jpg") center center no-repeat;
+  background-size: cover;
 }

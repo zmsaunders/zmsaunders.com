@@ -1,10 +1,23 @@
 header {
+
+    .container {
+        padding: 0;
+    }
+
     background: $c4;
-    padding: 1.5em 0;
+    padding: 1.5em 0 0 0;
+
+    @include media(900px) {
+        padding: 1.5em;
+    }
 
     .me {
         position: relative;
-        float: left;
+        @include span-columns(12);
+
+        @include media(900px) {
+            @include span-columns(7);
+        }
 
         .img {
             float: left;
@@ -23,7 +36,7 @@ header {
         }
 
         h1, h2 {
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-weight: 300;
             text-indent: 0;
             color: $c1;
@@ -39,11 +52,18 @@ header {
 
         h1 {
             margin-top: 10px;
+            margin-bottom: 10px;
         }
         h2 {
             font-weight: 300;
             color: $c2;
-            font-size: 1.2em;
+            font-size: 1em;
+
+            @include media(450px) {
+                margin-left: 120px;
+                font-size: 1.2em;
+                width: 400px;
+            }
         }
 
         &:hover {
@@ -55,21 +75,32 @@ header {
     }
 
     ul {
-        @include media(450px) {
+
+        @include span-columns(12);
+        background: $c3;
+        margin-top: 1.5em;
+
+        @include media(900px) {
             float: right;
-            li {
-                float: left;
-            }
+            width: auto;
+            background: none;
+        }
+
+        li {
+            float: left;
         }
 
         a {
             display: inline-block;
-            padding: .75em 2em;
-            margin: 1.25em .75em;
             text-transform: uppercase;
-            border-radius: 1em;
             font-weight: 500;
             color: $c1;
+            padding: .75em 2em;
+
+            @include media(900px) {
+                margin: 1.25em .75em;
+                border-radius: 1em;
+            }
 
             @include transition(all .2s);
             &:hover {

@@ -3,7 +3,7 @@
 @section('content')
     <div class="about">
         <div class="hero">
-            <span>&lt;about me/&gt;</span>
+            <span>&lt;<h1>about me</h1>/&gt;</span>
         </div>
         <div class="container">
             <div class="third">
