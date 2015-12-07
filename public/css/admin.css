@@ -754,6 +754,12 @@ footer .build-status:last-child {
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
+.copy blockquote {
+  border-left: 3px solid #BDD4DE;
+  font-size: 1.2em;
+  padding: 0.5em 0 0.5em 1.5em;
+}
+
 .postContent .heroSmall {
   background: #333 url("/images/post.jpg") center center no-repeat;
   background-size: cover;
