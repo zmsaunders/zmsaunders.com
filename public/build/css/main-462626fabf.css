@@ -395,6 +395,11 @@ h1 {
   font-size: 3em;
 }
 
+.error-40x .hero {
+  background: #333 url("/images/goat.jpg") center center no-repeat;
+  background-size: cover;
+}
+
 header {
   background: #2B3A42;
   padding: 1.5em 0 0 0;
@@ -763,59 +768,4 @@ footer .build-status:last-child {
 .postContent .heroSmall {
   background: #333 url("/images/post.jpg") center center no-repeat;
   background-size: cover;
-}
-
-.loginForm {
-  float: left;
-  display: block;
-  margin-right: 2.3576515979%;
-  width: 65.8807828007%;
-  margin-left: 17.0596085997%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.loginForm:last-child {
-  margin-right: 0;
-}
-
-#posts {
-  float: left;
-  display: block;
-  margin-right: 2.3576515979%;
-  width: 65.8807828007%;
-  margin-left: 17.0596085997%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#posts:last-child {
-  margin-right: 0;
-}
-
-#posts .post {
-  padding: 10px 0;
-  border-bottom: 1px solid #ccc;
-}
-
-#posts .post h3 {
-  margin: 0;
-}
-
-#posts .post:last-child {
-  border-bottom: none;
-}
-
-.postForm {
-  float: left;
-  display: block;
-  margin-right: 2.3576515979%;
-  width: 65.8807828007%;
-  margin-left: 17.0596085997%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.postForm:last-child {
-  margin-right: 0;
 }
