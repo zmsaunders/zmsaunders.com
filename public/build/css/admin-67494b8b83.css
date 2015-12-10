@@ -770,6 +770,10 @@ footer .build-status:last-child {
   background-size: cover;
 }
 
+button {
+  margin: 1em 1em 1em inherit;
+}
+
 .loginForm {
   float: left;
   display: block;
