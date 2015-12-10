@@ -7,6 +7,8 @@ use ZMS\Post;
 
 class BlogTest extends TestCase
 {
+    use DatabaseMigrations;
+
     /**
      * A basic functional test example.
      *
@@ -14,6 +16,8 @@ class BlogTest extends TestCase
      */
     public function testMainRoutes()
     {
+        $this->artisan('db:seed');
+
         $post = Post::first();
         $this->visit('/blog/' . $post->slug)
              ->see($post->title);

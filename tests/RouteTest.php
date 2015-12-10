@@ -6,6 +6,8 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class RouteTest extends TestCase
 {
+    use DatabaseMigrations;
+
     /**
      * A basic functional test example.
      *
@@ -13,6 +15,8 @@ class RouteTest extends TestCase
      */
     public function testMainRoutes()
     {
+        $this->artisan('db:seed');
+
         $this->visit('/')
              ->see('about me');
 
