@@ -21,9 +21,18 @@ $factory->define(ZMS\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(ZMS\Post::class, function (Faker\Generator $faker) use ($factory) {
+    $title = $faker->sentence(rand(1,10));
 	return [
-		'title' => $faker->sentence(rand(1,10)),
+		'title' => $title,
 		'text' => implode("\n\n", $faker->paragraphs(rand(1,10))),
+        'slug' => str_slug($title),
 		'user_id' => $factory->create('ZMS\User')->id,
+        'public' => true
 	];
+});
+
+$factory->define(ZMS\Tag::class, function (Faker\Generator $faker) {
+    return [
+        'tag' => $faker->word()
+    ];
 });

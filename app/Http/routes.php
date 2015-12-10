@@ -1,7 +1,8 @@
 <?php
 
 Route::get('/', function () {
-    return view('about');
+    return view('about')
+        ->with('title', 'Web Developer in Dayton Ohio');
 });
 
 Route::get('blog', 'BlogController@index');

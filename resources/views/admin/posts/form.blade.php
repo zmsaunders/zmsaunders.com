@@ -17,6 +17,9 @@
 				{!! Form::label('text', 'Post Body') !!}
 				{!! Form::textarea('text') !!}
 
+				{!! Form::label('public', 'Publish Post') !!}
+				{!! Form::checkbox('public') !!}
+
 				{!! Form::button('Save', ['type' => 'text']) !!}
 
 				{!! Form::close() !!}

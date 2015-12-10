@@ -23,10 +23,12 @@ class BlogController extends Controller
     {
         $posts = $this->post
             ->with('user')
+            ->where('public', true)
             ->orderBy('created_at', 'desc')
             ->paginate(15);
 
         return view('postList')
+            ->with('title', 'Blog')
             ->with('posts', $posts);
     }
 
@@ -40,6 +42,7 @@ class BlogController extends Controller
 
         return view('postView')
             ->with('post', $post)
+            ->with('title', $post->title)
             ->with('parser', $parser);
     }
 
