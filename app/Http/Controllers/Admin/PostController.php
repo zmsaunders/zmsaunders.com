@@ -50,7 +50,7 @@ class PostController extends Controller
 
         $post->title = $request->input('title');
         $post->text = $request->input('text');
-        $post->public = $request->input('public');
+        $post->public = ($request->input('public')) ? true : false;
         $post->slug = str_slug($request->input('title'));
 
         Auth::user()->posts()->save($post);
