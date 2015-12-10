@@ -26,7 +26,10 @@ class AddPostSlugColumn extends Migration
     public function down()
     {
         Schema::table('posts', function($table) {
-            $table->dropIndex('posts_slug_index');
+            if (config('database.default') != 'sqlite') {
+                $table->dropIndex('posts_slug_index');
+            }
+
             $table->dropColumn('slug');
         });
     }
